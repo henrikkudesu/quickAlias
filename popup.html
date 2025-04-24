@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>QuickAlias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <select id="language-selector" class="language-selector">
+                <option value="en">English</option>
+                <option value="pt">Português</option>
+            </select>
+            <h1 class="title" data-i18n="commands">Commands</h1>
+        </header>
+
+        <form id="add-form" class="add-form">
+            <div class="input-group">
+                <input type="text" id="command" class="input" data-i18n-placeholder="commandPlaceholder" required />
+            </div>
+            <div class="input-group">
+                <textarea id="text" class="textarea" data-i18n-placeholder="textPlaceholder" required></textarea>
+            </div>
+            <button type="submit" class="button" data-i18n="save">Save</button>
+        </form>
+
+        <ul id="command-list" class="command-list"></ul>
+    </div>
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <div class="modal-buttons">
+                <button id="modal-yes" class="button button--primary" data-i18n="yes">Sim</button>
+                <button id="modal-no" class="button button--secondary" data-i18n="no">Não</button>
+            </div>
+        </div>
+    </div>
+    <script src="translations.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>
