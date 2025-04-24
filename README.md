@@ -20,7 +20,6 @@ A browser extension that allows you to create custom text shortcuts (aliases) pr
 
 ```bash
 git clone https://github.com/henrikkudesu/quickAlias
-cd quickAlias
 ```
 
 2. Load the extension in Firefox:

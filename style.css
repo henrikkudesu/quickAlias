@@ -202,6 +202,76 @@ body {
   margin-top: 1rem;
 }
 
+.footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.footer-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-separator {
+  color: var(--text-secondary);
+}
+
+.about-title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.about-content {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.about-version {
+  margin: 1rem 0;
+  font-family: monospace;
+}
+
+.about-author {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-style: italic;
+}
+
+.about-author a:hover {
+  text-decoration: underline;
+}
+
+.about-author a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.about-author a:visited {
+  color: inherit;
+}
+
+.about-author a:active {
+  color: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #1f2937;

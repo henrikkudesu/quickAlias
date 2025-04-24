@@ -11,7 +11,12 @@ const translations = {
         commandPlaceholder: "/comando",
         textPlaceholder: "Insira um texto",
         yes: "Sim",
-        no: "Não"
+        no: "Não",
+        contribute: "Contribua",
+        about: "Sobre",
+        aboutTitle: "Sobre QuickAlias",
+        aboutDescription: "Crie atalhos de texto personalizados com '/' para inserir textos predefinidos rapidamente.",
+        close: "Fechar"
     },
     en: {
         pressTab: "Press Tab to autocomplete",
@@ -25,6 +30,11 @@ const translations = {
         commandPlaceholder: "/command",
         textPlaceholder: "Insert a text",
         yes: "Yes",
-        no: "No"
+        no: "No",
+        contribute: "Contribute",
+        about: "About",
+        aboutTitle: "About QuickAlias",
+        aboutDescription: "Create custom text shortcuts with '/' to quickly insert predefined texts.",
+        close: "Close"
     }
 };

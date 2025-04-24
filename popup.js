@@ -180,6 +180,33 @@ function showConfirmModal(message) {
     });
 }
 
+// About modal controls
+const aboutModal = document.getElementById('about-modal');
+const aboutLink = document.getElementById('about-link');
+const aboutClose = document.getElementById('about-close');
+
+aboutLink.addEventListener('click', () => {
+    aboutModal.style.display = 'block';
+});
+
+aboutClose.addEventListener('click', () => {
+    aboutModal.style.display = 'none';
+});
+
+// Close about modal when clicking outside
+aboutModal.addEventListener('click', (e) => {
+    if (e.target === aboutModal) {
+        aboutModal.style.display = 'none';
+    }
+});
+
+// Close about modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && aboutModal.style.display === 'block') {
+        aboutModal.style.display = 'none';
+    }
+});
+
 // Initialize extension
 updateLanguage(currentLang);
 loadCommands();

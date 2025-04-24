@@ -28,6 +28,13 @@
         </form>
 
         <ul id="command-list" class="command-list"></ul>
+
+        <footer class="footer">
+            <a href="https://github.com/henrikkudesu/quickAlias" target="_blank" class="footer-link"
+                data-i18n="contribute">Contribute</a>
+            <span class="footer-separator">•</span>
+            <button class="footer-link" id="about-link" data-i18n="about">About</button>
+        </footer>
     </div>
     <div id="confirm-modal" class="modal">
         <div class="modal-content">
@@ -35,6 +42,21 @@
             <div class="modal-buttons">
                 <button id="modal-yes" class="button button--primary" data-i18n="yes">Sim</button>
                 <button id="modal-no" class="button button--secondary" data-i18n="no">Não</button>
+            </div>
+        </div>
+    </div>
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <h2 class="about-title" data-i18n="aboutTitle">About QuickAlias</h2>
+            <div class="about-content">
+                <p data-i18n="aboutDescription">Create custom text shortcuts with '/' to quickly insert predefined
+                    texts.</p>
+                <p class="about-version">Version: 1.0.0</p>
+                <p class="about-author">Created by <a href="https://github.com/henrikkudesu" target="_blank">Leonardo
+                        Nascimento</a></p>
+            </div>
+            <div class="modal-buttons">
+                <button id="about-close" class="button button--primary" data-i18n="close">Close</button>
             </div>
         </div>
     </div>
