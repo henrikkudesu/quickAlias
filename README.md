@@ -16,13 +16,19 @@ A browser extension that allows you to create custom text shortcuts (aliases) pr
 
 ## Installation
 
-Currently available for Firefox. To install:
+1. Clone the repository:
 
-1. Download the latest release from [Releases](https://github.com/yourusername/QuickAlias/releases)
-2. Open Firefox and go to `about:debugging`
-3. Click "This Firefox" in the left sidebar
-4. Click "Load Temporary Add-on"
-5. Select the downloaded `.zip` file
+```bash
+git clone https://github.com/henrikkudesu/quickAlias
+cd quickAlias
+```
+
+2. Load the extension in Firefox:
+
+- Open `about:debugging`
+- Click "This Firefox"
+- Click "Load Temporary Add-on"
+- Select `manifest.json` from your project folder
 
 ## Usage
 
@@ -57,22 +63,6 @@ QuickAlias/
 ├── suggestion-box.css # Suggestion box styles
 └── icons/           # Extension icons
 ```
-
-### Building
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/henrikkudesu/quickAlias
-cd quickAlias
-```
-
-2. Load the extension in Firefox:
-
-- Open `about:debugging`
-- Click "This Firefox"
-- Click "Load Temporary Add-on"
-- Select `manifest.json` from your project folder
 
 ### Development Guidelines
 
