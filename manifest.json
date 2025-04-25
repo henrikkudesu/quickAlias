@@ -3,14 +3,22 @@
     "name": "QuickAlias",
     "version": "1.0",
     "description": "Allows you to create custom commands (aliases) preceded by '/' to insert predefined texts.",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{28f7fce9-6aad-491c-9930-bd4377e9f9d3}"
+        }
+    },
     "icons": {
     "48": "icons/border-48.png",
     "96": "icons/border-96.png"
   },
     "permissions": ["storage"],
     "action": {
-      "default_popup": "popup.html",
-      "default_icon": "icon.png"
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "icons/border-48.png",
+            "96": "icons/border-96.png"
+        }
     },
     "content_scripts": [
       {

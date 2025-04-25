@@ -110,18 +110,29 @@
         suggestionBox.style.left = `${rect.left}px`;
         suggestionBox.style.top = `${rect.bottom + window.scrollY + 5}px`;
 
+        // Cleans the suggestion box before adding new content
+        suggestionBox.textContent = '';
+
         if (!translations[userLang]?.pressTab) {
             console.error(`Translation for "pressTab" not found in "${userLang}"`);
-            suggestionBox.innerHTML = '<div>Translation unavailable</div>';
+            const errorDiv = document.createElement('div');
+            errorDiv.textContent = 'Translation unavailable';
+            suggestionBox.appendChild(errorDiv);
             return;
         }
 
-        suggestionBox.innerHTML = `
-            <div class="quick-alias-suggestion__hint">
-                ${translations[userLang].pressTab}
-            </div>
-            <div class="quick-alias-suggestion__text">${text}</div>
-        `;
+        // Creates the hint text
+        const hintDiv = document.createElement('div');
+        hintDiv.className = 'quick-alias-suggestion__hint';
+        hintDiv.textContent = translations[userLang].pressTab;
+        suggestionBox.appendChild(hintDiv);
+
+        // Creates the command text
+        const textDiv = document.createElement('div');
+        textDiv.className = 'quick-alias-suggestion__text';
+        textDiv.textContent = text;
+        suggestionBox.appendChild(textDiv);
+
         suggestionBox.style.display = 'block';
     }
 

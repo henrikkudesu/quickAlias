@@ -47,30 +47,54 @@ async function loadCommands() {
     try {
         const { commands } = await browser.storage.local.get('commands');
         const commandList = document.getElementById('command-list');
-        commandList.innerHTML = '';
+
+        // Clear the list
+        while (commandList.firstChild) {
+            commandList.removeChild(commandList.firstChild);
+        }
 
         // Show message if no commands exist
         if (!commands || Object.keys(commands).length === 0) {
-            commandList.innerHTML = `
-                <li style="text-align: center; color: var(--text-secondary);">
-                    ${translations[currentLang].noCommands}
-                </li>`;
+            const emptyMessage = document.createElement('li');
+            emptyMessage.style.textAlign = 'center';
+            emptyMessage.style.color = 'var(--text-secondary)';
+            emptyMessage.textContent = translations[currentLang].noCommands;
+            commandList.appendChild(emptyMessage);
             return;
         }
 
-        // Create list items for each command
+        // Create items for each command
         for (const [command, text] of Object.entries(commands)) {
             const li = document.createElement('li');
-            li.innerHTML = `
-                <div class="command-header">
-                    <code class="command-code">${command}</code>
-                    <button class="delete-btn" data-command="${command}">×</button>
-                </div>
-                <div class="command-text">${text}</div>
-            `;
 
-            // Adicionar evento para deletar comando com confirmação
-            li.querySelector('.delete-btn').addEventListener('click', async () => {
+            // Create header
+            const header = document.createElement('div');
+            header.className = 'command-header';
+
+            // Create command code
+            const code = document.createElement('code');
+            code.className = 'command-code';
+            code.textContent = command;
+
+            // Create delete button
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.textContent = '×';
+            deleteBtn.dataset.command = command;
+
+            // Create text div
+            const textDiv = document.createElement('div');
+            textDiv.className = 'command-text';
+            textDiv.textContent = text;
+
+            // Build structure
+            header.appendChild(code);
+            header.appendChild(deleteBtn);
+            li.appendChild(header);
+            li.appendChild(textDiv);
+
+            // Add delete event handler
+            deleteBtn.addEventListener('click', async () => {
                 const confirmed = await showConfirmModal(translations[currentLang].confirmDelete);
                 if (confirmed) {
                     const { commands } = await browser.storage.local.get('commands');
