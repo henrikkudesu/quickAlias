@@ -16,6 +16,12 @@ A browser extension that allows you to create custom text shortcuts (aliases) pr
 
 ## Installation
 
+### Through Mozilla Addons
+
+The extension is available on Mozilla Add-ons. Install it directly from the [official Firefox Add-ons store](https://addons.mozilla.org/firefox/addon/quickalias/). This is the recommended installation method for most users, ensuring you always get the latest stable version.
+
+### Through Firefox
+
 1. Clone the repository:
 
 ```bash
@@ -103,6 +109,7 @@ Future support planned for:
 - [ ] Import/Export commands
 - [ ] Command categories
 - [ ] Command search
+- [ ] Command autocomplete
 - [ ] Keyboard shortcuts
 - [ ] Cloud sync
 - [ ] More language support
